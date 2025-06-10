@@ -10,9 +10,11 @@ import (
 type WorkoutHandler struct {
 
 }
+
 func NewworkoutHandler() *WorkoutHandler{
 	return &WorkoutHandler{}
 }
+
 func (wh *WorkoutHandler) GetWorkoutById(w http.ResponseWriter,r *http.Request) {
 	paramsWorkoutId:=chi.URLParam(r,"workoutId")
 	if paramsWorkoutId == "" {
